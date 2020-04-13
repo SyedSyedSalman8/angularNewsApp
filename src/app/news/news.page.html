@@ -1,9 +1,19 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>news</ion-title>
+    <ion-title>
+      News
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <ion-card (click)="onGoToDetail(article)" *ngFor="let article of data?.articles">
+    <ion-card-header>
+      <ion-card-title >{{article.title}}</ion-card-title>
+    </ion-card-header>
+  <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-content>
+      {{article.description}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

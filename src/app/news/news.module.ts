@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { NewsPageRoutingModule } from './news-routing.module';
 
 import { NewsPage } from './news.page';
+import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewsPageRoutingModule
+    NewsPageRoutingModule,
+    ExploreContainerComponentModule
   ],
   declarations: [NewsPage]
 })
